@@ -1,0 +1,18 @@
+﻿body {
+}
+
+
+table {
+    border: double;
+    color: #369;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+td {
+    border: 1px solid black;
+}
+
+thead {
+    border: 1px solid black;
+}

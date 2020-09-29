@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    
+</head>
+<body> 
+   <div>
+       <my-count [All]="getAllEmployeesCount()" 
+                 [Male]="getMaleEmployeesCount()" 
+                 [Female]="getFemaleEmployeesCount()"
+                 (emitRef)="OnEmpCountRadioBtnChaged($event)">
+
+       </my-count>
+   </div>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <td>Code</td>
+                    <td>NameT</td>
+                    <td>Address</td>
+                    <td>Salary</td>
+                    <td>Date of birth</td>
+                    <td>Gender</td>
+                </tr>
+            </thead>
+            <tbody>
+                <ng-container *ngFor="let emp of employee;">
+                    <tr *ngIf="selectedEmpCountRadioButton=='All' || selectedEmpCountRadioButton==emp.Gender">
+                        <td>{{emp.Code}}</td>
+                        <td>{{emp.Name  | uppercase}}</td>
+                        <td>{{emp.Address}}</td>
+                        <td>{{emp.Salary | currency:'USD':true:'1.1-3' }}</td>
+                        <td>{{emp.Dateofbirth | date:'dd/MM/y'}}</td>
+                        <td>{{emp.Gender}}</td>
+                    </tr>
+                </ng-container>
+                <tr>
+                    <td>
+                        <button (click)="getTotalEmployees()" [class]="classesApply"> Submit </button>
+                    </td>
+                </tr>
+            </tbody>            
+        </table>
+
+    </div>    
+</body>
+</html>
+
+

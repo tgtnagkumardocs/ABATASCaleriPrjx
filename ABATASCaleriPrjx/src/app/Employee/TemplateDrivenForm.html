@@ -1,0 +1,14 @@
+﻿
+    <form #myRefForm1="ngForm" (ngSubmit)="GetFormData(myRefForm1)">
+
+                <input type="text" required name="UserName"  [(ngModel)]="UserName" /> 
+                <span *ngIf="myRefForm1.submitted && myRefForm1.controls.UserName.invalid">Please fill the username</span><br /><br />
+                <input type="text" required email name="Mail" [(ngModel)]="Mail" /> 
+                <span *ngIf="myRefForm1.submitted && myRefForm1.controls.Mail.invalid">Please fill the mailid</span><br /><br />           
+              
+            <button type="submit">submit</button>
+    </form>
+
+
+
+

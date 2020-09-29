@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>   
+    <div>
+        {{errorMsg}}
+    </div>
+    
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <td>Emp ID</td>
+                    <td>Emp Name</td>
+                    <td>Emp Address</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let emp of employee;">
+                    <td>{{emp.EmpId}}</td>
+                    <td>{{emp.EmpName}}</td>
+                    <td>{{emp.EmpAddress}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <br />        
+    </div>
+</body>
+</html>
+
+

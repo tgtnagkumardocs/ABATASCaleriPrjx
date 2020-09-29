@@ -1,0 +1,31 @@
+﻿
+    <form #myformref="ngForm" (ngSubmit)="GetData(myformref)">
+        <div>
+            <input type="text" name="UserName" ngModel />{{UserName}}
+            <input type="text" name="Password" [ngModel]="Password" />{{Password}}
+            <input type="text" name="Address" [(ngModel)]="Address" />{{Address}}
+
+
+            <button type="submit">Sending</button>
+        </div>
+    </form>
+
+    <br />
+
+<!--<div ngModelGroup="PortDetails">
+    <input type="text" name="PortName" ngModel />
+    <input type="text" name="PortUrl" [ngModel]="PortUrl" />
+    <input type="text" name="PortCode" [(ngModel)]="PortCode" />
+
+</div>-->
+
+
+
+<input type="radio" value="Total" name="options" [(ngModel)]="selectedRadioValue" (change)="onChangeRadio()" />
+<span class="radioClass">Total ({{Total}})</span>
+
+<input type="radio" value="Japan" name="options" [(ngModel)]="selectedRadioValue" (change)="onChangeRadio()" />
+<span class="radioClass">Japan ({{Japan}})</span>
+
+<input type="radio" value="UK" name="options" [(ngModel)]="selectedRadioValue" (change)="onChangeRadio()" />
+<span class="radioClass">UK ({{UK}})</span>

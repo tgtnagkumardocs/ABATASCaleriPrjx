@@ -1,0 +1,23 @@
+﻿
+<my-chk2 [Total]="getTotalCount()" [Japan]="getJapanCount()" [UK]="getUKCount()" (emitRef)="applyFilter($event)">
+
+</my-chk2><br />
+<table>
+    <thead>
+        <tr>
+            <td>Student Code</td>
+            <td>Student Address</td>
+        </tr>
+    </thead>
+    <tbody>
+        <ng-container *ngFor="let std of studentList">
+            <tr *ngIf="selectedFilterRadiovalue=='Total' || selectedFilterRadiovalue==std.StudentAddress">
+                <td>{{std.StudentCode}}</td>
+                <td>{{std.StudentAddress}}</td>
+            </tr>
+        </ng-container>
+    </tbody>
+</table>
+
+
+

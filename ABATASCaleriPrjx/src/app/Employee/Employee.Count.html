@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div>
+        <span class="radioClass">Show:</span>
+
+        <input type="radio" name="options" value="All" [(ngModel)]="selectedRadioBtnValue" (change)="OnRadioBtnSelectionChanged()" />
+        <span class="radioClass">All({{All}})</span>
+
+
+        <input type="radio" name="options" value="Male" [(ngModel)]="selectedRadioBtnValue" (change)="OnRadioBtnSelectionChanged()" />
+        <span class="radioClass">Male({{Male}})</span>
+
+        <input type="radio" name="options" value="Female" [(ngModel)]="selectedRadioBtnValue" (change)="OnRadioBtnSelectionChanged()" />
+        <span class="radioClass">Female({{Female}})</span>
+
+        <br />
+    </div>
+</body>
+</html>
+
+
+
